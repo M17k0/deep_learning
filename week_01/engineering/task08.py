@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from task07 import random_walk
+
+from week_01.engineering.task07 import random_walk
 
 DEFAULT_RNG = np.random.default_rng(123)
 

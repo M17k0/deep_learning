@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-from task03 import random_walk
+from week_01.engineering.task03 import random_walk
 
 
 def draw_plot_from_walk(walk):
@@ -9,7 +9,7 @@ def draw_plot_from_walk(walk):
   plt.ylabel("Step")
   plt.title("Random walk")
   plt.show()
-  
+
 
 def main():
   walk = random_walk()

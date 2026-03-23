@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from task05 import simulate_walks
+from week_01.engineering.task05 import simulate_walks
 
 def plot_all_walks(walks):
   walks_array = np.array(walks)

@@ -1,4 +1,4 @@
-from task03 import random_walk
+from week_01.engineering.task03 import random_walk
 
 SIMULATION_TIMES = 5
 

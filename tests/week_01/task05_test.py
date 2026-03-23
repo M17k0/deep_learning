@@ -1,6 +1,6 @@
 import numpy as np
 
-from task05 import simulate_walks
+from week_01.engineering.task05 import simulate_walks
 
 expected_walks = [[
     0, 0, 1, 2, 1, 3, 2, 1, 2, 1, 2, 3, 4, 7, 6, 7, 8, 14, 13, 14, 13, 12, 11,
@@ -49,9 +49,16 @@ expected_walks = [[
                   ]]
 
 
-def test_simulate_walks():
-  walks = simulate_walks(times=5, rng=np.random.default_rng(123))
+class TestSimulateWalks:
 
-  assert len(walks) == 5
-  assert all(isinstance(walk, list) for walk in walks)
-  assert walks == expected_walks
+  def test_when_times_is_five_then_returns_five_walks(self):
+    walks = simulate_walks(times=5, rng=np.random.default_rng(123))
+    assert len(walks) == 5
+
+  def test_when_called_then_each_walk_is_a_list(self):
+    walks = simulate_walks(times=5, rng=np.random.default_rng(123))
+    assert all(isinstance(walk, list) for walk in walks)
+
+  def test_when_rng_is_seeded_then_returns_expected_walks(self):
+    walks = simulate_walks(times=5, rng=np.random.default_rng(123))
+    assert walks == expected_walks
